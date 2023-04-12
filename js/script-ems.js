@@ -26,7 +26,7 @@ function buildGrid() {
     document.querySelector("#empCount").textContent = employees.length;
 }
 
-// Define a function to add a new employee
+
 function addEmployee(id, name, extension, email, department) {
     let employee = {id: id, name: name, extension: extension, email: email, department: department};
     employees.push(employee);
@@ -34,17 +34,17 @@ function addEmployee(id, name, extension, email, department) {
     buildGrid();
 }
 
-// Define a function to delete an employee
+
 function deleteEmployee(id) {
     employees = employees.filter(employee => employee.id !== id);
     localStorage.setItem("employees", JSON.stringify(employees));
     buildGrid();
 }
 
-// Check if employees data exists in localStorage, and load it if it does
+
 if (localStorage.getItem("employees")) {
     employees = JSON.parse(localStorage.getItem("employees"));
 }
 
-// Build the grid when the page loads
+
 window.addEventListener("load", buildGrid);
