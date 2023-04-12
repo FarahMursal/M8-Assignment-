@@ -6,7 +6,7 @@ let employees = [
     {id: 1005, name: "Tom Wilson", extension: 7890, email: "tom.wilson@company.com", department: "Executive"}
 ];
 
-// Define a function to build the grid
+
 function buildGrid() {
     let tbody = document.querySelector("#empTable tbody");
     let rows = "";
